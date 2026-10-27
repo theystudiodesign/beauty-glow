@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Beauty Glow Cream — الدفع عند الاستلام، التوصيل لجميع مدن المغرب.">
+<title>Beauty Glow Cream</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@500;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Playfair+Display:wght@700&display=swap">
+<style>
+/* Layout: one narrow RTL column, product-first; white like the jar's studio shot, brand red for action, label green for proof */
+:root{
+  --paper:#FFFFFF; --mist:#F6F3F1; --ink:#1E1A1B; --muted:#6B6264;
+  --red:#C8102E; --red-deep:#9E0B23; --green:#2E8B47; --line:#E8E1DE;
+  --f-display:"Noto Kufi Arabic","Segoe UI",Tahoma,sans-serif;
+  --f-body:"IBM Plex Sans Arabic","Segoe UI",Tahoma,sans-serif;
+  --f-latin:"Playfair Display","Times New Roman",serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.75;margin:0}
+.wrap{max-width:1040px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0;line-height:1.35}
+h2{font-size:clamp(1.5rem,4vw,2rem)}
+p{margin:0}
+.latin{font-family:var(--f-latin);direction:ltr;unicode-bidi:isolate}
+
+header{border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
+header img{height:44px;width:auto;display:block}
+.chip{font-size:.85rem;font-weight:600;color:var(--green);border:1px solid currentColor;border-radius:999px;padding:4px 12px;white-space:nowrap}
+
+.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(24px,5vw,64px);align-items:center;padding-block:clamp(28px,6vw,64px)}
+.hero figure{margin:0;background:var(--mist);border-radius:4px;overflow:hidden}
+.hero figure img{display:block;width:100%;height:auto}
+.hero .copy{display:flex;flex-direction:column;gap:18px;min-width:0}
+.brandline{font-size:clamp(1.3rem,3.4vw,1.75rem);color:var(--red);letter-spacing:.02em}
+.hero h1{font-size:clamp(1.9rem,5.2vw,2.9rem);font-weight:800}
+.hero h1 em{font-style:normal;color:var(--red)}
+.lead{color:var(--muted);font-size:1.08rem;max-width:34ch}
+.price{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.price strong{font-family:var(--f-display);font-size:2rem;color:var(--ink)}
+.price span{color:var(--muted);font-size:.95rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--f-display);font-weight:700;font-size:1.1rem;background:var(--red);color:#fff;text-decoration:none;border:0;border-radius:6px;padding:15px 28px;cursor:pointer;min-height:54px}
+.btn:hover{background:var(--red-deep)}
+.btn:focus-visible,input:focus-visible,label.qty:focus-within{outline:3px solid var(--green);outline-offset:2px}
+.assure{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:.92rem;color:var(--ink);list-style:none;padding:0;margin:0}
+.assure li::before{content:"✓";color:var(--green);font-weight:700;margin-inline-end:6px}
+
+section{padding-block:clamp(40px,7vw,72px)}
+.tint{background:var(--mist)}
+.sec-head{display:flex;flex-direction:column;gap:8px;margin-bottom:28px;max-width:60ch}
+.sec-head p{color:var(--muted)}
+.eyebrow{font-size:.82rem;font-weight:600;color:var(--green);letter-spacing:.04em}
+
+.targets{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border-top:2px solid var(--ink)}
+.targets div{padding:18px 4px 4px;border-inline-start:1px solid var(--line);display:flex;flex-direction:column;gap:4px;min-width:0}
+.targets div:first-child{border-inline-start:0}
+.targets b{font-family:var(--f-display);font-size:1.05rem}
+.targets small{color:var(--muted);font-size:.85rem;line-height:1.5}
+
+.formula{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,56px);align-items:start}
+.formula p{max-width:46ch}
+.label-quote{border-inline-start:3px solid var(--green);padding-inline-start:16px;color:var(--green);font-family:var(--f-latin);direction:ltr;text-align:left;font-size:1rem;line-height:1.6}
+
+.steps{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;counter-reset:s}
+.steps li{counter-increment:s;display:flex;flex-direction:column;gap:6px;min-width:0}
+.steps li::before{content:counter(s);font-family:var(--f-display);font-weight:800;font-size:2.4rem;color:var(--red);line-height:1}
+.steps b{font-family:var(--f-display)}
+.steps span{color:var(--muted);font-size:.95rem}
+
+.order{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(24px,5vw,56px);align-items:start}
+form{display:flex;flex-direction:column;gap:16px;background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:clamp(18px,4vw,28px)}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-weight:600;font-size:.95rem}
+input[type=text],input[type=tel]{font:inherit;font-size:1rem;padding:12px 14px;border:1px solid #CFC6C3;border-radius:6px;background:var(--paper);color:var(--ink);width:100%}
+input[type=tel]{direction:ltr;text-align:right}
+.err{color:var(--red);font-size:.85rem;min-height:1.2em}
+.qtys{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+label.qty{display:flex;flex-direction:column;align-items:center;gap:2px;border:1px solid #CFC6C3;border-radius:6px;padding:10px 6px;cursor:pointer;text-align:center}
+label.qty input{position:absolute;opacity:0;pointer-events:none}
+label.qty:has(input:checked){border-color:var(--red);box-shadow:inset 0 0 0 1px var(--red);background:#FFF5F6}
+label.qty b{font-family:var(--f-display)}
+label.qty small{color:var(--muted);font-size:.8rem}
+.total{display:flex;justify-content:space-between;border-top:1px dashed var(--line);padding-top:12px;font-weight:600}
+.done{border:1px solid var(--green);border-radius:8px;padding:18px;display:flex;flex-direction:column;gap:12px;background:#F2FAF4}
+.done .btn{background:var(--green)}
+.num{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.num code{font-family:var(--f-body);direction:ltr;unicode-bidi:isolate;font-weight:600;user-select:all}
+.ghost{font:inherit;font-size:.85rem;background:none;border:1px solid var(--line);border-radius:4px;padding:4px 10px;cursor:pointer;color:var(--ink)}
+
+details{border-bottom:1px solid var(--line);padding-block:14px}
+details summary{cursor:pointer;font-family:var(--f-display);font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:12px}
+details summary::after{content:"+";color:var(--red);font-size:1.3rem;line-height:1}
+details[open] summary::after{content:"−"}
+details p{color:var(--muted);padding-top:8px;max-width:65ch}
+.caution{font-size:.88rem;color:var(--muted);border-top:1px solid var(--line);padding-top:16px;margin-top:24px}
+
+footer{background:var(--ink);color:#EDE7E5}
+footer .wrap{padding-block:28px 96px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:.9rem}
+
+.sticky{position:fixed;inset:auto 0 0 0;background:var(--paper);border-top:1px solid var(--line);padding:10px max(16px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));display:none;z-index:5}
+.sticky .btn{width:100%}
+
+@media (max-width:760px){
+  .hero .wrap,.formula,.order{grid-template-columns:1fr}
+  .targets{grid-template-columns:1fr 1fr}
+  .targets div{border-inline-start:0;border-bottom:1px solid var(--line);padding-bottom:12px}
+  .steps{grid-template-columns:1fr}
+  .sticky{display:block}
+}
+
+.topbar{background:var(--ink);color:#fff;font-size:.85rem;text-align:center}
+.topbar .wrap{padding-block:7px}
+.pairs{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.pair{display:flex;flex-direction:column;gap:10px;min-width:0}
+.ba{position:relative;aspect-ratio:4/5;max-width:100%;border-radius:6px;overflow:hidden;background:var(--paper);border:1px solid var(--line);--pos:50%;direction:ltr}
+.ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.ba .after{clip-path:inset(0 0 0 var(--pos))}
+.ba .bar{position:absolute;top:0;bottom:0;left:var(--pos);width:2px;background:#fff;box-shadow:0 0 0 1px rgba(0,0,0,.15);transform:translateX(-1px);pointer-events:none}
+.ba .bar::after{content:"⇆";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:38px;height:38px;border-radius:50%;background:#fff;color:var(--red);display:grid;place-items:center;font-size:1.1rem;box-shadow:0 2px 8px rgba(0,0,0,.18)}
+.ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+.ba .tag{position:absolute;top:10px;font-size:.78rem;font-weight:600;background:rgba(30,26,27,.75);color:#fff;padding:3px 10px;border-radius:999px;pointer-events:none}
+.ba .t-b{left:10px}.ba .t-a{right:10px}
+.ba .ph{position:absolute;inset:0;display:none;place-items:center;text-align:center;padding:20px;color:var(--muted);font-size:.9rem;border:2px dashed var(--line);border-radius:6px;background:var(--mist);direction:rtl}
+.ba.empty .ph{display:grid}.ba.empty img,.ba.empty .bar,.ba.empty .tag,.ba.empty input{display:none}
+.pair figcaption{font-size:.9rem;color:var(--muted)}
+.note{font-size:.82rem;color:var(--muted);margin-top:18px}
+@media (max-width:760px){.pairs{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+</style>
+
+</head>
+<body>
+<div dir="rtl" lang="ar">
+<div class="topbar"><div class="wrap">الدفع عند الاستلام · التوصيل لجميع مدن المغرب</div></div>
+<header><div class="wrap">
+  <img src="assets/logo.jpg" alt="Beauty Glow">
+  <span class="chip">الدفع عند الاستلام</span>
+</div></header>
+
+<main>
+<div class="hero"><div class="wrap">
+  <figure><img src="assets/jar.jpg" alt="علبة كريم Beauty Glow Cream" width="900" height="900"></figure>
+  <div class="copy">
+    <p class="brandline latin">BEAUTY GLOW CREAM</p>
+    <h1>بشرة أصفى، <em>وإشراقة</em> كل نهار</h1>
+    <p class="lead">كريم بتركيبة لطيفة كيساعد على التخفيف من الكلف، آثار الحبوب، البقع الداكنة والرؤوس السوداء، وكيوحد لون البشرة.</p>
+    <div class="price"><strong>XXX درهم</strong><span>للعلبة الواحدة</span></div>
+    <a class="btn" href="#order">اطلبي دابا</a>
+    <ul class="assure">
+      <li>الدفع عند الاستلام</li>
+      <li>التوصيل لجميع المدن</li>
+      <li>الطلب عبر واتساب</li>
+    </ul>
+  </div>
+</div></div>
+
+<section class="tint"><div class="wrap">
+  <div class="sec-head">
+    <span class="eyebrow">فين كيخدم</span>
+    <h2>خمسة ديال المشاكل، كريم واحد</h2>
+  </div>
+  <div class="targets">
+    <div><b>الكلف</b><small>النمش والبقع الصغيرة</small></div>
+    <div><b>آثار الحبوب</b><small>العلامات القديمة</small></div>
+    <div><b>البقع الداكنة</b><small>عدم توحد اللون</small></div>
+    <div><b>الرؤوس السوداء</b><small>المسام والشوائب</small></div>
+    <div><b>الخطوط الرقيقة</b><small>التعب والجفاف</small></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="sec-head">
+    <span class="eyebrow">النتائج</span>
+    <h2>قبل وبعد</h2>
+    <p>جري الخط باش تقارني. صور حقيقية ديال زبونات استعملو الكريم.</p>
+  </div>
+  <div class="pairs">
+    <figure class="pair" style="margin:0">
+      <div class="ba" data-ba>
+        <img src="assets/before-1.jpg" alt="قبل الاستعمال">
+        <img class="after" src="assets/after-1.jpg" alt="بعد الاستعمال">
+        <span class="bar"></span><span class="tag t-b">قبل</span><span class="tag t-a">بعد</span>
+        <input type="range" min="0" max="100" value="50" id="ba1" aria-label="قارني قبل وبعد">
+        <div class="ph">بلاصة صورة حقيقية<br>assets/before-1.jpg و assets/after-1.jpg</div>
+      </div>
+      <figcaption>بعد 4 أسابيع ديال الاستعمال المنتظم</figcaption>
+    </figure>
+    <figure class="pair" style="margin:0">
+      <div class="ba" data-ba>
+        <img src="assets/before-2.jpg" alt="قبل الاستعمال">
+        <img class="after" src="assets/after-2.jpg" alt="بعد الاستعمال">
+        <span class="bar"></span><span class="tag t-b">قبل</span><span class="tag t-a">بعد</span>
+        <input type="range" min="0" max="100" value="50" id="ba2" aria-label="قارني قبل وبعد">
+        <div class="ph">بلاصة صورة حقيقية<br>assets/before-2.jpg و assets/after-2.jpg</div>
+      </div>
+      <figcaption>بعد 4 أسابيع ديال الاستعمال المنتظم</figcaption>
+    </figure>
+  </div>
+  <p class="note">النتائج كتختلف من شخص لآخر على حساب نوع البشرة والاستعمال.</p>
+</div></section>
+
+<section><div class="wrap formula">
+  <div class="sec-head" style="margin:0">
+    <span class="eyebrow">التركيبة</span>
+    <h2>لطيفة على البشرة، واضحة ف النتيجة</h2>
+    <p>القوام ديالو خفيف وكيتشرب بالزربة. كيغذي البشرة وكيساعد يوحد اللون، ومع الاستعمال المنتظم كتبان البشرة أصفى، أنعم وكثر إشراقا.</p>
+  </div>
+  <p class="label-quote">Helps reduce freckles, acne scars, dark spots, blackheads and fine lines. Its gentle formula nourishes and evens out the skin tone, for a fairer, clearer and more radiant complexion.</p>
+</div></section>
+
+<section class="tint"><div class="wrap">
+  <div class="sec-head">
+    <span class="eyebrow">طريقة الاستعمال</span>
+    <h2>صباح وعشية، ف دقيقة</h2>
+  </div>
+  <ol class="steps">
+    <li><b>نقي البشرة</b><span>غسلي وجهك ونشفيه مزيان.</span></li>
+    <li><b>شوية د الكريم</b><span>حطي كمية صغيرة على الوجه.</span></li>
+    <li><b>دلكي بلطف</b><span>دلكي حتى يتشرب الكريم كامل.</span></li>
+  </ol>
+</div></section>
+
+<section id="order"><div class="wrap order">
+  <div class="sec-head" style="margin:0">
+    <span class="eyebrow">الطلب</span>
+    <h2>عمري المعلومات، والطلب كيوصل لينا ف واتساب</h2>
+    <p>ما كتخلصي حتى توصلك العلبة لباب الدار. غادي نتاصلو بيك باش نأكدو الطلب.</p>
+  </div>
+  <div>
+    <form id="f" novalidate>
+      <div class="field"><label for="name">الاسم الكامل</label><input id="name" type="text" autocomplete="name" placeholder="مثلا: سارة العلوي"><span class="err" id="e-name"></span></div>
+      <div class="field"><label for="phone">رقم الهاتف</label><input id="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="06 00 00 00 00"><span class="err" id="e-phone"></span></div>
+      <div class="field"><label for="city">المدينة</label><input id="city" type="text" autocomplete="address-level2" placeholder="مثلا: أكادير"><span class="err" id="e-city"></span></div>
+      <div class="field"><span style="font-weight:600;font-size:.95rem">الكمية</span>
+        <div class="qtys">
+          <label class="qty"><input type="radio" name="qty" id="q1" value="1" checked><b>علبة 1</b><small>XXX درهم</small></label>
+          <label class="qty"><input type="radio" name="qty" id="q2" value="2"><b>2 علب</b><small>XXX درهم</small></label>
+          <label class="qty"><input type="radio" name="qty" id="q3" value="3"><b>3 علب</b><small>XXX درهم</small></label>
+        </div>
+      </div>
+      <button class="btn" type="submit">تأكيد الطلب</button>
+    </form>
+    <div class="done" id="done" hidden>
+      <b style="font-family:var(--f-display)">الطلب واجد. بقات خطوة وحدة:</b>
+      <a class="btn" id="wa" href="#" target="_blank" rel="noopener">صيفطي الطلب ف واتساب</a>
+      <div class="num"><span>ولا تواصلي معانا مباشرة:</span><code id="numtxt">+212 630-478374</code><button class="ghost" type="button" id="copy">نسخ الرقم</button></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="tint"><div class="wrap">
+  <div class="sec-head"><span class="eyebrow">أسئلة</span><h2>أسئلة كتعاود</h2></div>
+  <details><summary>كيفاش كنخلص؟</summary><p>كتخلصي نقدا للموزع ملي كتوصلك العلبة. ما كاين حتى خلاص مسبق.</p></details>
+  <details><summary>شحال كتاخد ليا العلبة؟</summary><p>مع الاستعمال صباح وعشية، العلبة كتكفي تقريبا شهر. كتختلف على حساب الكمية اللي كتستعملي.</p></details>
+  <details><summary>واش مناسب لجميع أنواع البشرة؟</summary><p>جربي أول مرة كمية صغيرة ف بلاصة صغيرة من الجلد. إلا بان شي احمرار ولا حكة، وقفي الاستعمال.</p></details>
+  <p class="caution">للاستعمال الخارجي فقط. تجنبي ملامسة العينين. أوقفي الاستعمال إلا وقع تهيج. يحفظ بعيدا عن متناول الأطفال، ف بلاصة باردة وناشفة.</p>
+</div></section>
+</main>
+
+<footer><div class="wrap"><span class="latin">BEAUTY GLOW CREAM</span><span>الطلب والاستفسار: <span dir="ltr">+212 630-478374</span></span></div></footer>
+<div class="sticky"><a class="btn" href="#order">اطلبي دابا · الدفع عند الاستلام</a></div>
+</div>
+
+<script>
+(function(){
+
+  document.querySelectorAll("[data-ba]").forEach(function(b){
+    var imgs=b.querySelectorAll("img"),n=0,bad=false;
+    imgs.forEach(function(i){
+      function chk(){n++; if(n===imgs.length&&bad)b.classList.add("empty");}
+      if(i.complete){ if(!i.naturalWidth)bad=true; chk(); }
+      else{ i.addEventListener("load",chk); i.addEventListener("error",function(){bad=true;chk();}); }
+    });
+    var r=b.querySelector("input");
+    r.addEventListener("input",function(){b.style.setProperty("--pos",r.value+"%");});
+  });
+  var WA="212630478374";
+  var f=document.getElementById("f"),done=document.getElementById("done"),wa=document.getElementById("wa");
+  function set(id,msg){document.getElementById("e-"+id).textContent=msg||"";}
+  f.addEventListener("submit",function(e){
+    e.preventDefault();
+    var name=document.getElementById("name").value.trim();
+    var phone=document.getElementById("phone").value.replace(/[\s.\-]/g,"").replace(/^\+212/,"0").replace(/^00212/,"0");
+    var city=document.getElementById("city").value.trim();
+    var qty=(f.querySelector("input[name=qty]:checked")||{}).value||"1";
+    var ok=true;
+    set("name",name.length<3?(ok=false,"كتبي الاسم الكامل."):"");
+    set("phone",/^0[5-7]\d{8}$/.test(phone)?"":(ok=false,"الرقم خاصو يكون 10 أرقام ويبدا بـ 06 ولا 07 ولا 05."));
+    set("city",city.length<2?(ok=false,"كتبي المدينة."):"");
+    if(!ok)return;
+    var msg="طلب جديد: Beauty Glow Cream\nالاسم: "+name+"\nالهاتف: "+phone+"\nالمدينة: "+city+"\nالكمية: "+qty;
+    wa.href="https://wa.me/"+WA+"?text="+encodeURIComponent(msg);
+    f.hidden=true;done.hidden=false;wa.focus();
+  });
+  document.getElementById("copy").addEventListener("click",function(){
+    var b=this,t=document.getElementById("numtxt");
+    function fb(){var r=document.createRange();r.selectNodeContents(t);var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent="حدد الرقم ونسخيه";}
+    try{navigator.clipboard.writeText("+212630478374").then(function(){b.textContent="تنسخ";},fb);}catch(x){fb();}
+  });
+})();
+</script>
+
+</body>
+</html>
