@@ -268,9 +268,9 @@ footer .wrap{padding-block:28px 96px;display:flex;justify-content:space-between;
       <button class="btn" type="submit">تأكيد الطلب</button>
     </form>
     <div class="done" id="done" hidden>
-      <b style="font-family:var(--f-display)">الطلب واجد. بقات خطوة وحدة:</b>
+      <b style="font-family:var(--f-display)">كنحلو واتساب… إلا ما تحلش بوحدو، كليكي هنا:</b>
       <a class="btn" id="wa" href="#" target="_blank" rel="noopener">صيفطي الطلب ف واتساب</a>
-      <div class="num"><span>ولا تواصلي معانا مباشرة:</span><code id="numtxt">+212 630-478374</code><button class="ghost" type="button" id="copy">نسخ الرقم</button></div>
+      <div class="num"><span>ولا تواصلي معانا مباشرة:</span><code id="numtxt">+212 699-251421</code><button class="ghost" type="button" id="copy">نسخ الرقم</button></div>
     </div>
   </div>
 </div></section>
@@ -284,7 +284,7 @@ footer .wrap{padding-block:28px 96px;display:flex;justify-content:space-between;
 </div></section>
 </main>
 
-<footer><div class="wrap"><span class="latin">BEAUTY GLOW CREAM</span><span>الطلب والاستفسار: <span dir="ltr">+212 630-478374</span></span></div></footer>
+<footer><div class="wrap"><span class="latin">BEAUTY GLOW CREAM</span><span>الطلب والاستفسار: <span dir="ltr">+212 699-251421</span></span></div></footer>
 <div class="sticky"><a class="btn" href="#order">اطلبي دابا · الدفع عند الاستلام</a></div>
 </div>
 
@@ -301,7 +301,7 @@ footer .wrap{padding-block:28px 96px;display:flex;justify-content:space-between;
     var r=b.querySelector("input");
     r.addEventListener("input",function(){b.style.setProperty("--pos",r.value+"%");});
   });
-  var WA="212630478374";
+  var WA="212699251421";
   var f=document.getElementById("f"),done=document.getElementById("done"),wa=document.getElementById("wa");
   function set(id,msg){document.getElementById("e-"+id).textContent=msg||"";}
   f.addEventListener("submit",function(e){
@@ -317,12 +317,12 @@ footer .wrap{padding-block:28px 96px;display:flex;justify-content:space-between;
     if(!ok)return;
     var msg="طلب جديد: Beauty Glow Cream\nالاسم: "+name+"\nالهاتف: "+phone+"\nالمدينة: "+city+"\nالكمية: "+qty+"\nالمجموع: "+({1:220,2:420,3:600}[qty]||220)+" درهم";
     wa.href="https://wa.me/"+WA+"?text="+encodeURIComponent(msg);
-    f.hidden=true;done.hidden=false;wa.focus();
+    f.hidden=true;done.hidden=false;window.location.href=wa.href;
   });
   document.getElementById("copy").addEventListener("click",function(){
     var b=this,t=document.getElementById("numtxt");
     function fb(){var r=document.createRange();r.selectNodeContents(t);var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent="حدد الرقم ونسخيه";}
-    try{navigator.clipboard.writeText("+212630478374").then(function(){b.textContent="تنسخ";},fb);}catch(x){fb();}
+    try{navigator.clipboard.writeText("+212699251421").then(function(){b.textContent="تنسخ";},fb);}catch(x){fb();}
   });
 })();
 </script>
