@@ -82,6 +82,7 @@ label.qty{display:flex;flex-direction:column;align-items:center;gap:2px;border:1
 label.qty input{position:absolute;opacity:0;pointer-events:none}
 label.qty:has(input:checked){border-color:var(--red);box-shadow:inset 0 0 0 1px var(--red);background:#FFF5F6}
 label.qty b{font-family:var(--f-display)}
+label.qty .save{font-style:normal;font-size:.72rem;font-weight:600;color:var(--green)}
 label.qty small{color:var(--muted);font-size:.8rem}
 .total{display:flex;justify-content:space-between;border-top:1px dashed var(--line);padding-top:12px;font-weight:600}
 .done{border:1px solid var(--green);border-radius:8px;padding:18px;display:flex;flex-direction:column;gap:12px;background:#F2FAF4}
@@ -161,7 +162,7 @@ footer .wrap{padding-block:28px 96px;display:flex;justify-content:space-between;
     <p class="brandline latin">BEAUTY GLOW CREAM</p>
     <h1>بشرة أصفى، <em>وإشراقة</em> كل نهار</h1>
     <p class="lead">كريم بتركيبة لطيفة كيساعد على التخفيف من الكلف، آثار الحبوب، البقع الداكنة والرؤوس السوداء، وكيوحد لون البشرة.</p>
-    <div class="price"><strong>XXX درهم</strong><span>للعلبة الواحدة</span></div>
+    <div class="price"><strong>220 درهم</strong><span>للعلبة الواحدة · 3 علب بـ 600 درهم</span></div>
     <a class="btn" href="#order">اطلبي دابا</a>
     <ul class="assure">
       <li>الدفع عند الاستلام</li>
@@ -259,9 +260,9 @@ footer .wrap{padding-block:28px 96px;display:flex;justify-content:space-between;
       <div class="field"><label for="city">المدينة</label><input id="city" type="text" autocomplete="address-level2" placeholder="مثلا: أكادير"><span class="err" id="e-city"></span></div>
       <div class="field"><span style="font-weight:600;font-size:.95rem">الكمية</span>
         <div class="qtys">
-          <label class="qty"><input type="radio" name="qty" id="q1" value="1" checked><b>علبة 1</b><small>XXX درهم</small></label>
-          <label class="qty"><input type="radio" name="qty" id="q2" value="2"><b>2 علب</b><small>XXX درهم</small></label>
-          <label class="qty"><input type="radio" name="qty" id="q3" value="3"><b>3 علب</b><small>XXX درهم</small></label>
+          <label class="qty"><input type="radio" name="qty" id="q1" value="1" checked><b>علبة 1</b><small>220 درهم</small></label>
+          <label class="qty"><input type="radio" name="qty" id="q2" value="2"><b>2 علب</b><small>420 درهم</small><em class="save">وفري 20 درهم</em></label>
+          <label class="qty"><input type="radio" name="qty" id="q3" value="3"><b>3 علب</b><small>600 درهم</small><em class="save">وفري 60 درهم</em></label>
         </div>
       </div>
       <button class="btn" type="submit">تأكيد الطلب</button>
@@ -314,7 +315,7 @@ footer .wrap{padding-block:28px 96px;display:flex;justify-content:space-between;
     set("phone",/^0[5-7]\d{8}$/.test(phone)?"":(ok=false,"الرقم خاصو يكون 10 أرقام ويبدا بـ 06 ولا 07 ولا 05."));
     set("city",city.length<2?(ok=false,"كتبي المدينة."):"");
     if(!ok)return;
-    var msg="طلب جديد: Beauty Glow Cream\nالاسم: "+name+"\nالهاتف: "+phone+"\nالمدينة: "+city+"\nالكمية: "+qty;
+    var msg="طلب جديد: Beauty Glow Cream\nالاسم: "+name+"\nالهاتف: "+phone+"\nالمدينة: "+city+"\nالكمية: "+qty+"\nالمجموع: "+({1:220,2:420,3:600}[qty]||220)+" درهم";
     wa.href="https://wa.me/"+WA+"?text="+encodeURIComponent(msg);
     f.hidden=true;done.hidden=false;wa.focus();
   });
