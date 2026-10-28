@@ -128,6 +128,20 @@ footer .wrap{padding-block:28px 96px;display:flex;justify-content:space-between;
 .pair figcaption{font-size:.9rem;color:var(--muted)}
 .note{font-size:.82rem;color:var(--muted);margin-top:18px}
 @media (max-width:760px){.pairs{grid-template-columns:1fr}}
+
+.results{display:grid;grid-template-columns:1fr 1.25fr;gap:20px;align-items:start}
+.res{margin:0;display:flex;flex-direction:column;gap:8px;min-width:0}
+.res-img{position:relative;border-radius:8px;overflow:hidden;background:var(--mist);border:1px solid var(--line)}
+.res-img img{display:block;width:100%;height:auto}
+.res figcaption{font-size:.85rem;color:var(--muted)}
+.res .tag{position:absolute;top:12px;font-size:.8rem;font-weight:600;background:rgba(30,26,27,.8);color:#fff;padding:4px 12px;border-radius:999px}
+.reviews{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}
+.review{margin:0;background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:26px 22px 18px;display:flex;flex-direction:column;gap:16px;min-width:0;position:relative}
+.review::before{content:"\201D";position:absolute;top:-4px;inset-inline-start:18px;font-family:var(--f-latin);font-size:3.8rem;line-height:1;color:var(--red)}
+.review blockquote{margin:0;padding-top:14px;font-size:1.05rem;line-height:1.95;color:var(--ink)}
+.review img{width:100%;height:auto;border-radius:6px;border:1px solid var(--line)}
+.review figcaption{font-size:.85rem;font-weight:600;color:var(--green);border-top:1px solid var(--line);padding-top:10px}
+@media (max-width:760px){.results,.reviews{grid-template-columns:1fr}}
 @media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
 </style>
 
@@ -174,32 +188,41 @@ footer .wrap{padding-block:28px 96px;display:flex;justify-content:space-between;
 <section><div class="wrap">
   <div class="sec-head">
     <span class="eyebrow">النتائج</span>
-    <h2>قبل وبعد</h2>
-    <p>جري الخط باش تقارني. صور حقيقية ديال زبونات استعملو الكريم.</p>
+    <h2>صور حقيقية من زبوناتنا</h2>
+    <p>صور صيفطوها لينا زبونات استعملو نفس الكريم قبل ما يتبدل الاسم ديالو لـ Beauty Glow. بلا تعديل.</p>
   </div>
-  <div class="pairs">
-    <figure class="pair" style="margin:0">
-      <div class="ba" data-ba>
-        <img src="assets/before-1.jpg" alt="قبل الاستعمال">
-        <img class="after" src="assets/after-1.jpg" alt="بعد الاستعمال">
-        <span class="bar"></span><span class="tag t-b">قبل</span><span class="tag t-a">بعد</span>
-        <input type="range" min="0" max="100" value="50" id="ba1" aria-label="قارني قبل وبعد">
-        <div class="ph">بلاصة صورة حقيقية<br>assets/before-1.jpg و assets/after-1.jpg</div>
-      </div>
-      <figcaption>بعد 4 أسابيع ديال الاستعمال المنتظم</figcaption>
+  <div class="results">
+    <figure class="res">
+      <div class="res-img r1"><img src="assets/result-1.jpg" alt="صورة قبل وبعد من زبونة" loading="lazy" width="831" height="1280">
+        <span class="tag" style="left:10px">قبل</span><span class="tag" style="right:10px">بعد</span></div>
+      <figcaption>قبل وبعد · صورة من زبونة</figcaption>
     </figure>
-    <figure class="pair" style="margin:0">
-      <div class="ba" data-ba>
-        <img src="assets/before-2.jpg" alt="قبل الاستعمال">
-        <img class="after" src="assets/after-2.jpg" alt="بعد الاستعمال">
-        <span class="bar"></span><span class="tag t-b">قبل</span><span class="tag t-a">بعد</span>
-        <input type="range" min="0" max="100" value="50" id="ba2" aria-label="قارني قبل وبعد">
-        <div class="ph">بلاصة صورة حقيقية<br>assets/before-2.jpg و assets/after-2.jpg</div>
-      </div>
-      <figcaption>بعد 4 أسابيع ديال الاستعمال المنتظم</figcaption>
+    <figure class="res">
+      <div class="res-img r2"><img src="assets/result-2.jpg" alt="صورة قبل وبعد من زبونة" loading="lazy" width="1000" height="803">
+        <span class="tag" style="right:10px">قبل</span><span class="tag" style="left:10px">بعد</span></div>
+      <figcaption>قبل وبعد · صورة من زبونة</figcaption>
     </figure>
   </div>
   <p class="note">النتائج كتختلف من شخص لآخر على حساب نوع البشرة والاستعمال.</p>
+</div></section>
+
+<section class="tint"><div class="wrap">
+  <div class="sec-head">
+    <span class="eyebrow">آراء الزبونات</span>
+    <h2>بالكلام ديالهم</h2>
+    <p>رسائل وصلاتنا من زبونات استعملو الكريم، كيف كتبوها.</p>
+  </div>
+  <div class="reviews">
+    <figure class="review">
+      <blockquote>صراحة مدة عشرين سنة وانا كانستعمل الكريمات ولاكن هاذ الكريم بانت النتيجة اديالو في الاسابيع الاولى شكرا لصاحب المنتوج انا الان في العلبة الثانية لن أبدله بكريم اخر اذابقي على اصله</blockquote>
+      <figcaption>زبونة · فالعلبة الثانية</figcaption>
+    </figure>
+    <figure class="review">
+      <blockquote>كنبغي نشكرك بزاف على هاد المنتوج الرائع بسبابك وليت كنحس براسي أية من الجمال من بعد ما كان وجهي متقدرش تشوف فيه الشوفة</blockquote>
+      <img src="assets/review-whatsapp.jpg" alt="لقطة من رسالة واتساب ديال الزبونة" loading="lazy" width="540" height="310">
+      <figcaption>كوثر، الجديدة · رسالة واتساب</figcaption>
+    </figure>
+  </div>
 </div></section>
 
 <section><div class="wrap formula">
