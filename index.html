@@ -148,6 +148,18 @@ footer .wrap{padding-block:28px 96px;display:flex;justify-content:space-between;
 .g{margin:0;border-radius:10px;overflow:hidden;background:var(--paper);border:1px solid var(--line);min-width:0}
 .g img{display:block;width:100%;height:auto}
 @media (max-width:760px){.gallery{grid-template-columns:1fr 1fr}.g-main{grid-column:1/-1}.g-main img{aspect-ratio:4/5}}
+
+.hero figure.hg{background:none;border-radius:0;overflow:visible}
+.hg{margin:0;display:flex;flex-direction:column;gap:10px;align-items:center;min-width:0}
+.hg-main{height:min(560px,72vh);aspect-ratio:9/16;max-width:100%;border-radius:10px;overflow:hidden;background:var(--mist)}
+.hg-main img{display:block;width:100%;height:100%;object-fit:contain;transition:opacity .25s}
+.hg-th{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+.th{width:58px;aspect-ratio:9/16;padding:0;border:2px solid transparent;border-radius:6px;overflow:hidden;background:var(--mist);cursor:pointer}
+.th img{width:100%;height:100%;object-fit:cover;display:block}
+.th.on{border-color:var(--red)}
+.th:focus-visible{outline:3px solid var(--green);outline-offset:2px}
+@media (max-width:760px){.hg-main{height:auto;width:min(100%,320px)}.th{width:48px}}
+@media (prefers-reduced-motion:reduce){.hg-main img{transition:none}}
 @media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
 </style>
 
@@ -162,7 +174,10 @@ footer .wrap{padding-block:28px 96px;display:flex;justify-content:space-between;
 
 <main>
 <div class="hero"><div class="wrap">
-  <figure><img src="assets/jar.jpg" alt="علبة كريم Beauty Glow Cream" width="900" height="900"></figure>
+  <figure class="hg">
+    <div class="hg-main"><img id="hgImg" src="assets/product-1.jpg" alt="Beauty Glow Cream" width="720" height="1274"></div>
+    <div class="hg-th"><button type="button" class="th on" data-i="0" aria-label="صورة 1"><img src="assets/product-1.jpg" alt=""></button><button type="button" class="th" data-i="1" aria-label="صورة 2"><img src="assets/product-2.jpg" alt=""></button><button type="button" class="th" data-i="2" aria-label="صورة 3"><img src="assets/product-3.jpg" alt=""></button><button type="button" class="th" data-i="3" aria-label="صورة 4"><img src="assets/product-4.jpg" alt=""></button><button type="button" class="th" data-i="4" aria-label="صورة 5"><img src="assets/jar.jpg" alt=""></button></div>
+  </figure>
   <div class="copy">
     <p class="brandline latin">BEAUTY GLOW CREAM</p>
     <h1>بشرة أصفى، <em>وإشراقة</em> كل نهار</h1>
@@ -228,20 +243,6 @@ footer .wrap{padding-block:28px 96px;display:flex;justify-content:space-between;
       <img src="assets/review-whatsapp.jpg" alt="لقطة من رسالة واتساب ديال الزبونة" loading="lazy" width="540" height="310">
       <figcaption>كوثر، الجديدة · رسالة واتساب</figcaption>
     </figure>
-  </div>
-</div></section>
-
-<section class="tint"><div class="wrap">
-  <div class="sec-head">
-    <span class="eyebrow">الكريم من قريب</span>
-    <h2>قوام كريمي خفيف، كيتشرب بسرعة</h2>
-    <p>علبة زجاجية مسدودة مزيان، كتحافظ على الكريم من أول استعمال حتى للأخير.</p>
-  </div>
-  <div class="gallery">
-    <figure class="g"><img src="assets/product-1.jpg" alt="Beauty Glow Cream" loading="lazy" width="720" height="1274"></figure>
-    <figure class="g"><img src="assets/product-2.jpg" alt="Beauty Glow Cream" loading="lazy" width="720" height="1274"></figure>
-    <figure class="g"><img src="assets/product-3.jpg" alt="Beauty Glow Cream" loading="lazy" width="720" height="1274"></figure>
-    <figure class="g"><img src="assets/product-4.jpg" alt="Beauty Glow Cream" loading="lazy" width="720" height="1274"></figure>
   </div>
 </div></section>
 
@@ -320,6 +321,16 @@ footer .wrap{padding-block:28px 96px;display:flex;justify-content:space-between;
     var r=b.querySelector("input");
     r.addEventListener("input",function(){b.style.setProperty("--pos",r.value+"%");});
   });
+
+  (function(){
+    var main=document.getElementById("hgImg"); if(!main) return;
+    var ths=[].slice.call(document.querySelectorAll(".th")), i=0, timer=null;
+    function show(n){ i=(n+ths.length)%ths.length; main.style.opacity=0;
+      setTimeout(function(){ main.src=ths[i].querySelector("img").src; main.style.opacity=1; },180);
+      ths.forEach(function(t,k){ t.classList.toggle("on",k===i); }); }
+    ths.forEach(function(t,k){ t.addEventListener("click",function(){ clearInterval(timer); show(k); }); });
+    if(!window.matchMedia("(prefers-reduced-motion: reduce)").matches){ timer=setInterval(function(){ show(i+1); },3500); }
+  })();
   var WA="212699251421";
   var f=document.getElementById("f"),done=document.getElementById("done"),wa=document.getElementById("wa");
   function set(id,msg){document.getElementById("e-"+id).textContent=msg||"";}
