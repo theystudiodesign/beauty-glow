@@ -166,6 +166,25 @@ footer .wrap{padding-block:28px 96px;display:flex;justify-content:space-between;
 .fb blockquote{margin:0;font-size:1rem;line-height:1.7;color:var(--ink)}
 .fb figcaption{display:flex;align-items:center;gap:8px;font-size:.8rem;color:var(--muted)}
 .fb .av{width:26px;height:26px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;font-weight:700;font-size:.8rem;flex:none}
+
+.voices{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.vc{display:flex;align-items:center;gap:12px;background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:8px 18px 8px 8px;min-width:0}
+.vc[hidden]{display:none}
+.vc-btn{flex:none;width:46px;height:46px;border-radius:50%;border:0;background:var(--red);color:#fff;display:grid;place-items:center;cursor:pointer}
+.vc-btn svg{width:20px;height:20px;fill:currentColor}
+.vc-btn .i-pause,.vc.playing .vc-btn .i-play{display:none}
+.vc.playing .vc-btn .i-pause{display:block}
+.vc-btn:focus-visible{outline:3px solid var(--green);outline-offset:2px}
+.vc-body{flex:1;min-width:0;display:flex;flex-direction:column;gap:4px}
+.vc-wave{position:relative;height:24px;display:flex;align-items:center;gap:2px;direction:ltr}
+.vc-wave i{flex:1;background:#D9CFCC;border-radius:2px;min-height:3px}
+.vc-prog{position:absolute;inset:0 auto 0 0;width:0;background:linear-gradient(90deg,rgba(200,16,46,.18),rgba(200,16,46,.18));border-radius:4px;pointer-events:none}
+.vc.playing .vc-wave i{background:#E9A3AE}
+.vc-meta{display:flex;justify-content:space-between;font-size:.78rem;color:var(--muted)}
+.vc-t{font-variant-numeric:tabular-nums;direction:ltr}
+.more{display:block;margin:18px auto 0;padding:10px 22px;font-size:.95rem;border-radius:999px}
+@media (max-width:900px){.voices{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.voices{grid-template-columns:1fr}}
 @media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
 </style>
 
@@ -303,6 +322,82 @@ footer .wrap{padding-block:28px 96px;display:flex;justify-content:space-between;
   </div>
 </div></section>
 
+<section><div class="wrap">
+  <div class="sec-head">
+    <span class="eyebrow">شهادات صوتية</span>
+    <h2>سمعي من الزبونات نيت</h2>
+    <p>رسائل صوتية وصلاتنا ف واتساب من زبونات جربو الكريم، نشرناها بموافقتهم.</p>
+  </div>
+  <div class="voices" id="voices">
+    <div class="vc" data-src="assets/audio/avis-01.mp3">
+      <button type="button" class="vc-btn" aria-label="سمعي الرسالة 1"><svg viewBox="0 0 24 24" class="i-play"><path d="M8 5v14l11-7z"/></svg><svg viewBox="0 0 24 24" class="i-pause"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg></button>
+      <div class="vc-body"><div class="vc-wave" aria-hidden="true"><i style="height:30%"></i><i style="height:55%"></i><i style="height:80%"></i><i style="height:45%"></i><i style="height:95%"></i><i style="height:60%"></i><i style="height:35%"></i><i style="height:70%"></i><i style="height:50%"></i><i style="height:85%"></i><i style="height:40%"></i><i style="height:65%"></i><i style="height:90%"></i><i style="height:45%"></i><i style="height:60%"></i><i style="height:30%"></i><i style="height:75%"></i><i style="height:55%"></i><i style="height:40%"></i><i style="height:65%"></i><span class="vc-prog"></span></div>
+      <div class="vc-meta"><span>زبونة · رسالة صوتية</span><span class="vc-t">0:13</span></div></div>
+    </div><div class="vc" data-src="assets/audio/avis-02.mp3">
+      <button type="button" class="vc-btn" aria-label="سمعي الرسالة 2"><svg viewBox="0 0 24 24" class="i-play"><path d="M8 5v14l11-7z"/></svg><svg viewBox="0 0 24 24" class="i-pause"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg></button>
+      <div class="vc-body"><div class="vc-wave" aria-hidden="true"><i style="height:30%"></i><i style="height:55%"></i><i style="height:80%"></i><i style="height:45%"></i><i style="height:95%"></i><i style="height:60%"></i><i style="height:35%"></i><i style="height:70%"></i><i style="height:50%"></i><i style="height:85%"></i><i style="height:40%"></i><i style="height:65%"></i><i style="height:90%"></i><i style="height:45%"></i><i style="height:60%"></i><i style="height:30%"></i><i style="height:75%"></i><i style="height:55%"></i><i style="height:40%"></i><i style="height:65%"></i><span class="vc-prog"></span></div>
+      <div class="vc-meta"><span>زبونة · رسالة صوتية</span><span class="vc-t">0:52</span></div></div>
+    </div><div class="vc" data-src="assets/audio/avis-03.mp3">
+      <button type="button" class="vc-btn" aria-label="سمعي الرسالة 3"><svg viewBox="0 0 24 24" class="i-play"><path d="M8 5v14l11-7z"/></svg><svg viewBox="0 0 24 24" class="i-pause"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg></button>
+      <div class="vc-body"><div class="vc-wave" aria-hidden="true"><i style="height:30%"></i><i style="height:55%"></i><i style="height:80%"></i><i style="height:45%"></i><i style="height:95%"></i><i style="height:60%"></i><i style="height:35%"></i><i style="height:70%"></i><i style="height:50%"></i><i style="height:85%"></i><i style="height:40%"></i><i style="height:65%"></i><i style="height:90%"></i><i style="height:45%"></i><i style="height:60%"></i><i style="height:30%"></i><i style="height:75%"></i><i style="height:55%"></i><i style="height:40%"></i><i style="height:65%"></i><span class="vc-prog"></span></div>
+      <div class="vc-meta"><span>زبونة · رسالة صوتية</span><span class="vc-t">1:04</span></div></div>
+    </div><div class="vc" data-src="assets/audio/avis-04.mp3">
+      <button type="button" class="vc-btn" aria-label="سمعي الرسالة 4"><svg viewBox="0 0 24 24" class="i-play"><path d="M8 5v14l11-7z"/></svg><svg viewBox="0 0 24 24" class="i-pause"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg></button>
+      <div class="vc-body"><div class="vc-wave" aria-hidden="true"><i style="height:30%"></i><i style="height:55%"></i><i style="height:80%"></i><i style="height:45%"></i><i style="height:95%"></i><i style="height:60%"></i><i style="height:35%"></i><i style="height:70%"></i><i style="height:50%"></i><i style="height:85%"></i><i style="height:40%"></i><i style="height:65%"></i><i style="height:90%"></i><i style="height:45%"></i><i style="height:60%"></i><i style="height:30%"></i><i style="height:75%"></i><i style="height:55%"></i><i style="height:40%"></i><i style="height:65%"></i><span class="vc-prog"></span></div>
+      <div class="vc-meta"><span>زبونة · رسالة صوتية</span><span class="vc-t">0:37</span></div></div>
+    </div><div class="vc" data-src="assets/audio/avis-05.mp3">
+      <button type="button" class="vc-btn" aria-label="سمعي الرسالة 5"><svg viewBox="0 0 24 24" class="i-play"><path d="M8 5v14l11-7z"/></svg><svg viewBox="0 0 24 24" class="i-pause"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg></button>
+      <div class="vc-body"><div class="vc-wave" aria-hidden="true"><i style="height:30%"></i><i style="height:55%"></i><i style="height:80%"></i><i style="height:45%"></i><i style="height:95%"></i><i style="height:60%"></i><i style="height:35%"></i><i style="height:70%"></i><i style="height:50%"></i><i style="height:85%"></i><i style="height:40%"></i><i style="height:65%"></i><i style="height:90%"></i><i style="height:45%"></i><i style="height:60%"></i><i style="height:30%"></i><i style="height:75%"></i><i style="height:55%"></i><i style="height:40%"></i><i style="height:65%"></i><span class="vc-prog"></span></div>
+      <div class="vc-meta"><span>زبونة · رسالة صوتية</span><span class="vc-t">0:11</span></div></div>
+    </div><div class="vc" data-src="assets/audio/avis-06.mp3">
+      <button type="button" class="vc-btn" aria-label="سمعي الرسالة 6"><svg viewBox="0 0 24 24" class="i-play"><path d="M8 5v14l11-7z"/></svg><svg viewBox="0 0 24 24" class="i-pause"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg></button>
+      <div class="vc-body"><div class="vc-wave" aria-hidden="true"><i style="height:30%"></i><i style="height:55%"></i><i style="height:80%"></i><i style="height:45%"></i><i style="height:95%"></i><i style="height:60%"></i><i style="height:35%"></i><i style="height:70%"></i><i style="height:50%"></i><i style="height:85%"></i><i style="height:40%"></i><i style="height:65%"></i><i style="height:90%"></i><i style="height:45%"></i><i style="height:60%"></i><i style="height:30%"></i><i style="height:75%"></i><i style="height:55%"></i><i style="height:40%"></i><i style="height:65%"></i><span class="vc-prog"></span></div>
+      <div class="vc-meta"><span>زبونة · رسالة صوتية</span><span class="vc-t">0:14</span></div></div>
+    </div><div class="vc" hidden data-src="assets/audio/avis-07.mp3">
+      <button type="button" class="vc-btn" aria-label="سمعي الرسالة 7"><svg viewBox="0 0 24 24" class="i-play"><path d="M8 5v14l11-7z"/></svg><svg viewBox="0 0 24 24" class="i-pause"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg></button>
+      <div class="vc-body"><div class="vc-wave" aria-hidden="true"><i style="height:30%"></i><i style="height:55%"></i><i style="height:80%"></i><i style="height:45%"></i><i style="height:95%"></i><i style="height:60%"></i><i style="height:35%"></i><i style="height:70%"></i><i style="height:50%"></i><i style="height:85%"></i><i style="height:40%"></i><i style="height:65%"></i><i style="height:90%"></i><i style="height:45%"></i><i style="height:60%"></i><i style="height:30%"></i><i style="height:75%"></i><i style="height:55%"></i><i style="height:40%"></i><i style="height:65%"></i><span class="vc-prog"></span></div>
+      <div class="vc-meta"><span>زبونة · رسالة صوتية</span><span class="vc-t">0:14</span></div></div>
+    </div><div class="vc" hidden data-src="assets/audio/avis-08.mp3">
+      <button type="button" class="vc-btn" aria-label="سمعي الرسالة 8"><svg viewBox="0 0 24 24" class="i-play"><path d="M8 5v14l11-7z"/></svg><svg viewBox="0 0 24 24" class="i-pause"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg></button>
+      <div class="vc-body"><div class="vc-wave" aria-hidden="true"><i style="height:30%"></i><i style="height:55%"></i><i style="height:80%"></i><i style="height:45%"></i><i style="height:95%"></i><i style="height:60%"></i><i style="height:35%"></i><i style="height:70%"></i><i style="height:50%"></i><i style="height:85%"></i><i style="height:40%"></i><i style="height:65%"></i><i style="height:90%"></i><i style="height:45%"></i><i style="height:60%"></i><i style="height:30%"></i><i style="height:75%"></i><i style="height:55%"></i><i style="height:40%"></i><i style="height:65%"></i><span class="vc-prog"></span></div>
+      <div class="vc-meta"><span>زبونة · رسالة صوتية</span><span class="vc-t">0:11</span></div></div>
+    </div><div class="vc" hidden data-src="assets/audio/avis-09.mp3">
+      <button type="button" class="vc-btn" aria-label="سمعي الرسالة 9"><svg viewBox="0 0 24 24" class="i-play"><path d="M8 5v14l11-7z"/></svg><svg viewBox="0 0 24 24" class="i-pause"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg></button>
+      <div class="vc-body"><div class="vc-wave" aria-hidden="true"><i style="height:30%"></i><i style="height:55%"></i><i style="height:80%"></i><i style="height:45%"></i><i style="height:95%"></i><i style="height:60%"></i><i style="height:35%"></i><i style="height:70%"></i><i style="height:50%"></i><i style="height:85%"></i><i style="height:40%"></i><i style="height:65%"></i><i style="height:90%"></i><i style="height:45%"></i><i style="height:60%"></i><i style="height:30%"></i><i style="height:75%"></i><i style="height:55%"></i><i style="height:40%"></i><i style="height:65%"></i><span class="vc-prog"></span></div>
+      <div class="vc-meta"><span>زبونة · رسالة صوتية</span><span class="vc-t">0:11</span></div></div>
+    </div><div class="vc" hidden data-src="assets/audio/avis-10.mp3">
+      <button type="button" class="vc-btn" aria-label="سمعي الرسالة 10"><svg viewBox="0 0 24 24" class="i-play"><path d="M8 5v14l11-7z"/></svg><svg viewBox="0 0 24 24" class="i-pause"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg></button>
+      <div class="vc-body"><div class="vc-wave" aria-hidden="true"><i style="height:30%"></i><i style="height:55%"></i><i style="height:80%"></i><i style="height:45%"></i><i style="height:95%"></i><i style="height:60%"></i><i style="height:35%"></i><i style="height:70%"></i><i style="height:50%"></i><i style="height:85%"></i><i style="height:40%"></i><i style="height:65%"></i><i style="height:90%"></i><i style="height:45%"></i><i style="height:60%"></i><i style="height:30%"></i><i style="height:75%"></i><i style="height:55%"></i><i style="height:40%"></i><i style="height:65%"></i><span class="vc-prog"></span></div>
+      <div class="vc-meta"><span>زبونة · رسالة صوتية</span><span class="vc-t">0:29</span></div></div>
+    </div><div class="vc" hidden data-src="assets/audio/avis-11.mp3">
+      <button type="button" class="vc-btn" aria-label="سمعي الرسالة 11"><svg viewBox="0 0 24 24" class="i-play"><path d="M8 5v14l11-7z"/></svg><svg viewBox="0 0 24 24" class="i-pause"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg></button>
+      <div class="vc-body"><div class="vc-wave" aria-hidden="true"><i style="height:30%"></i><i style="height:55%"></i><i style="height:80%"></i><i style="height:45%"></i><i style="height:95%"></i><i style="height:60%"></i><i style="height:35%"></i><i style="height:70%"></i><i style="height:50%"></i><i style="height:85%"></i><i style="height:40%"></i><i style="height:65%"></i><i style="height:90%"></i><i style="height:45%"></i><i style="height:60%"></i><i style="height:30%"></i><i style="height:75%"></i><i style="height:55%"></i><i style="height:40%"></i><i style="height:65%"></i><span class="vc-prog"></span></div>
+      <div class="vc-meta"><span>زبونة · رسالة صوتية</span><span class="vc-t">0:14</span></div></div>
+    </div><div class="vc" hidden data-src="assets/audio/avis-12.mp3">
+      <button type="button" class="vc-btn" aria-label="سمعي الرسالة 12"><svg viewBox="0 0 24 24" class="i-play"><path d="M8 5v14l11-7z"/></svg><svg viewBox="0 0 24 24" class="i-pause"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg></button>
+      <div class="vc-body"><div class="vc-wave" aria-hidden="true"><i style="height:30%"></i><i style="height:55%"></i><i style="height:80%"></i><i style="height:45%"></i><i style="height:95%"></i><i style="height:60%"></i><i style="height:35%"></i><i style="height:70%"></i><i style="height:50%"></i><i style="height:85%"></i><i style="height:40%"></i><i style="height:65%"></i><i style="height:90%"></i><i style="height:45%"></i><i style="height:60%"></i><i style="height:30%"></i><i style="height:75%"></i><i style="height:55%"></i><i style="height:40%"></i><i style="height:65%"></i><span class="vc-prog"></span></div>
+      <div class="vc-meta"><span>زبونة · رسالة صوتية</span><span class="vc-t">0:15</span></div></div>
+    </div><div class="vc" hidden data-src="assets/audio/avis-13.mp3">
+      <button type="button" class="vc-btn" aria-label="سمعي الرسالة 13"><svg viewBox="0 0 24 24" class="i-play"><path d="M8 5v14l11-7z"/></svg><svg viewBox="0 0 24 24" class="i-pause"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg></button>
+      <div class="vc-body"><div class="vc-wave" aria-hidden="true"><i style="height:30%"></i><i style="height:55%"></i><i style="height:80%"></i><i style="height:45%"></i><i style="height:95%"></i><i style="height:60%"></i><i style="height:35%"></i><i style="height:70%"></i><i style="height:50%"></i><i style="height:85%"></i><i style="height:40%"></i><i style="height:65%"></i><i style="height:90%"></i><i style="height:45%"></i><i style="height:60%"></i><i style="height:30%"></i><i style="height:75%"></i><i style="height:55%"></i><i style="height:40%"></i><i style="height:65%"></i><span class="vc-prog"></span></div>
+      <div class="vc-meta"><span>زبونة · رسالة صوتية</span><span class="vc-t">0:28</span></div></div>
+    </div><div class="vc" hidden data-src="assets/audio/avis-14.mp3">
+      <button type="button" class="vc-btn" aria-label="سمعي الرسالة 14"><svg viewBox="0 0 24 24" class="i-play"><path d="M8 5v14l11-7z"/></svg><svg viewBox="0 0 24 24" class="i-pause"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg></button>
+      <div class="vc-body"><div class="vc-wave" aria-hidden="true"><i style="height:30%"></i><i style="height:55%"></i><i style="height:80%"></i><i style="height:45%"></i><i style="height:95%"></i><i style="height:60%"></i><i style="height:35%"></i><i style="height:70%"></i><i style="height:50%"></i><i style="height:85%"></i><i style="height:40%"></i><i style="height:65%"></i><i style="height:90%"></i><i style="height:45%"></i><i style="height:60%"></i><i style="height:30%"></i><i style="height:75%"></i><i style="height:55%"></i><i style="height:40%"></i><i style="height:65%"></i><span class="vc-prog"></span></div>
+      <div class="vc-meta"><span>زبونة · رسالة صوتية</span><span class="vc-t">0:28</span></div></div>
+    </div><div class="vc" hidden data-src="assets/audio/avis-15.mp3">
+      <button type="button" class="vc-btn" aria-label="سمعي الرسالة 15"><svg viewBox="0 0 24 24" class="i-play"><path d="M8 5v14l11-7z"/></svg><svg viewBox="0 0 24 24" class="i-pause"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg></button>
+      <div class="vc-body"><div class="vc-wave" aria-hidden="true"><i style="height:30%"></i><i style="height:55%"></i><i style="height:80%"></i><i style="height:45%"></i><i style="height:95%"></i><i style="height:60%"></i><i style="height:35%"></i><i style="height:70%"></i><i style="height:50%"></i><i style="height:85%"></i><i style="height:40%"></i><i style="height:65%"></i><i style="height:90%"></i><i style="height:45%"></i><i style="height:60%"></i><i style="height:30%"></i><i style="height:75%"></i><i style="height:55%"></i><i style="height:40%"></i><i style="height:65%"></i><span class="vc-prog"></span></div>
+      <div class="vc-meta"><span>زبونة · رسالة صوتية</span><span class="vc-t">0:33</span></div></div>
+    </div><div class="vc" hidden data-src="assets/audio/avis-16.mp3">
+      <button type="button" class="vc-btn" aria-label="سمعي الرسالة 16"><svg viewBox="0 0 24 24" class="i-play"><path d="M8 5v14l11-7z"/></svg><svg viewBox="0 0 24 24" class="i-pause"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg></button>
+      <div class="vc-body"><div class="vc-wave" aria-hidden="true"><i style="height:30%"></i><i style="height:55%"></i><i style="height:80%"></i><i style="height:45%"></i><i style="height:95%"></i><i style="height:60%"></i><i style="height:35%"></i><i style="height:70%"></i><i style="height:50%"></i><i style="height:85%"></i><i style="height:40%"></i><i style="height:65%"></i><i style="height:90%"></i><i style="height:45%"></i><i style="height:60%"></i><i style="height:30%"></i><i style="height:75%"></i><i style="height:55%"></i><i style="height:40%"></i><i style="height:65%"></i><span class="vc-prog"></span></div>
+      <div class="vc-meta"><span>زبونة · رسالة صوتية</span><span class="vc-t">0:17</span></div></div>
+    </div>
+  </div>
+  <button type="button" class="ghost more" id="moreVoices">سمعي المزيد (10)</button>
+</div></section>
+
 <section class="tint"><div class="wrap">
   <div class="sec-head"><span class="eyebrow">أسئلة</span><h2>أسئلة كتعاود</h2></div>
   <details><summary>كيفاش كنخلص؟</summary><p>كتخلصي نقدا للموزع ملي كتوصلك العلبة. ما كاين حتى خلاص مسبق.</p></details>
@@ -338,6 +433,24 @@ footer .wrap{padding-block:28px 96px;display:flex;justify-content:space-between;
       ths.forEach(function(t,k){ t.classList.toggle("on",k===i); }); }
     ths.forEach(function(t,k){ t.addEventListener("click",function(){ clearInterval(timer); show(k); }); });
     if(!window.matchMedia("(prefers-reduced-motion: reduce)").matches){ timer=setInterval(function(){ show(i+1); },3500); }
+  })();
+
+  (function(){
+    var cur=null, audio=new Audio(); audio.preload="none";
+    function stop(){ if(cur){ cur.classList.remove("playing"); } }
+    document.querySelectorAll(".vc").forEach(function(c){
+      c.querySelector(".vc-btn").addEventListener("click",function(){
+        if(cur===c && !audio.paused){ audio.pause(); return; }
+        if(cur!==c){ stop(); cur=c; audio.src=c.getAttribute("data-src"); }
+        audio.play().catch(function(){});
+      });
+    });
+    audio.addEventListener("play",function(){ if(cur) cur.classList.add("playing"); });
+    audio.addEventListener("pause",function(){ if(cur) cur.classList.remove("playing"); });
+    audio.addEventListener("ended",function(){ if(cur){ cur.classList.remove("playing"); cur.querySelector(".vc-prog").style.width="0"; } });
+    audio.addEventListener("timeupdate",function(){ if(cur && audio.duration){ cur.querySelector(".vc-prog").style.width=(audio.currentTime/audio.duration*100)+"%"; } });
+    var more=document.getElementById("moreVoices");
+    if(more){ more.addEventListener("click",function(){ document.querySelectorAll(".vc[hidden]").forEach(function(c){ c.hidden=false; }); more.hidden=true; }); }
   })();
   var WA="212699251421";
   var f=document.getElementById("f"),done=document.getElementById("done"),wa=document.getElementById("wa");
